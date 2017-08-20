@@ -1,3 +1,36 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .App {
-  margin: 2.5%;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2.5%;
+    overflow: hidden;
+}
+
+.full {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
 }
