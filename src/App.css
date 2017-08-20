@@ -1,5 +1,8 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
+    outline: none;
 }
 
 html,
@@ -9,6 +12,8 @@ body,
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 .App {
@@ -21,6 +26,8 @@ body,
 
     padding: 2.5%;
     overflow: hidden;
+
+    background: #f7f7f7;
 }
 
 .full {
@@ -33,4 +40,82 @@ body,
     width: 100%;
 
     overflow: hidden;
+}
+
+a,
+a:visited {
+    color: orangered;
+}
+
+.Header {
+    display: block;
+}
+.Header > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.Kitsu {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    margin-left: 0;
+}
+
+.TableContainer {
+    border-bottom: 1px solid darkgray;
+}
+.TableContainer--loading {
+    border-bottom: none;
+}
+
+.Msg {
+    background: #e8e8e8;
+    padding: .5em;
+    border-left: 0.5em solid #b5b5b5;
+}
+
+.Spin {
+    animation: spin 1s infinite reverse;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.Loading {
+    height: 1px;
+    color: transparent;
+    background: orangered;
+    border-radius: 100%;
+    width: 0%;
+    -webkit-animation: loading 1s infinite ease-in-out;
+    animation: loading 2s infinite ease-in-out;
+    margin: 0;
+    z-index: 100;
+}
+@keyframes loading {
+    0% {
+        width: 0%;
+        transform: translateX(0%);
+    }
+    45% {
+        width: 100%;
+        transform: translateX(0%);
+    }
+    55% {
+        width: 100%;
+        transform: translateX(0%);
+    }
+    99.9% {
+        transform: translateX(100%);
+        width: 100%;
+    }
+    100% {
+        transform: translateX(0%);
+        width: 0%;
+    }
 }
