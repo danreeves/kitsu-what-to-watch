@@ -88,7 +88,7 @@ class App extends Component {
             ? <p className="Msg">User not found</p>
             : <p className="Msg">Type in a username</p>}
         <p>
-          A project by <a href="https://danreev.es">dnrvs</a>
+          A world wide website by <a href="https://danreev.es">danreeves</a>
         </p>
       </div>
     );
