@@ -33,7 +33,7 @@ class App extends Component {
       userid: null,
     }));
     const resp = await fetch(
-      `https://kitsu.io/api/edge/users?filter[name]=${name}`
+      `https://kitsu.io/api/edge/users?filter[slug]=${name}`
     );
     if (resp.ok) {
       const { data } = await resp.json();
