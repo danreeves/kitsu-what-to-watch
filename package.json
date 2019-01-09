@@ -14,6 +14,7 @@
     "serve": "^6.0.6"
   },
   "scripts": {
+    "deploy": "npm run build && surge ./build kitsu-watchlist.surge.sh",
     "start": "npm run build && npm run serve",
     "dev": "react-scripts start",
     "build": "react-scripts build",
